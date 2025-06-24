@@ -1,0 +1,111 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --ilc-primary: #2c3e50;
+  --ilc-secondary: #e74c3c;
+  --ilc-accent: #3498db;
+  --ilc-light: #ecf0f1;
+  --ilc-dark: #343a40;
+  --ilc-text: #2c3e50;
+  --ilc-white: #ffffff;
+}
+
+body {
+  background-color: var(--ilc-light);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(255, 255, 255);
+}
+
+.header-logo {
+  height: 50px;
+  width: auto;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.app-main {
+  flex: 1;
+  padding: 0 15px 2rem;
+}
+
+
+.app-card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: var(--ilc-white);
+  height: 100%;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.app-card-header {
+  padding: 1.25rem;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  font-weight: 500;
+  color: white;
+}
+
+.app-card-body {
+  padding: 1.25rem;
+}
+
+/* ===== RODAPÉ ===== */
+.app-footer {
+  background-color: var(--ilc-dark);
+  text-align: center;
+  color: var(--ilc-white);
+  padding: 1.5rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.bg-info {
+  background-color: var(--ilc-accent) !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important; /* Verde do Bootstrap */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .app-header {
+    padding: 1.5rem 0;
+  }
+
+  .header-logo {
+    max-height: 40px;
+  }
+}

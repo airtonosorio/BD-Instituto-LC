@@ -1,0 +1,9 @@
+# Ignorar pastas de build e publicação
+bin/
+obj/
+*.dll
+*.pdb
+*.log
+*.db
+publish/
+**/publish/

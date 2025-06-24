@@ -1,0 +1,20 @@
+# .NET
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.db
+
+# Publicações
+publish/
+**/publish/
+
+# React (caso tenha frontend)
+node_modules/
+dist/
+build/
+
+# Outros
+.env
+*.log
