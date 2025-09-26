@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ILC.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialSqlServer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,13 +15,13 @@ namespace ILC.Api.Migrations
                 name: "beneficiario_ilc",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    nome = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    data_nascimento = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    telefone = table.Column<string>(type: "TEXT", maxLength: 15, nullable: true),
-                    pessoas_na_casa = table.Column<int>(type: "INTEGER", nullable: false),
-                    tipo_escola = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    data_nascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    telefone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
+                    pessoas_na_casa = table.Column<int>(type: "int", nullable: false),
+                    tipo_escola = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {

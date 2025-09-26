@@ -4,9 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Usar SQLite local
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=ilc.db"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options => options.AddPolicy("AllowReact", policy =>
     policy.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader()));
